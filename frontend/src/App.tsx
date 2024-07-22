@@ -34,7 +34,7 @@ function App() {
     } else if(Array.isArray(result.data)){
       setSearchResult(result.data);
     }
-    console.log()
+    console.log();
   };
 
   const onPortfolioDelete = (e:any) =>{
@@ -43,7 +43,7 @@ function App() {
       return value !== e.target[0].value;
     });
     setPortfolioValues(removed);
-  }
+  };
 
   return (
     <div className="App">
