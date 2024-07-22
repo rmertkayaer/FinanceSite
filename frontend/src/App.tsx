@@ -37,11 +37,19 @@ function App() {
     console.log()
   };
 
+  const onPortfolioDelete = (e:any) =>{
+    e.preventDefault();
+    const removed = portfolioValues.filter((value) =>{
+      return value !== e.target[0].value;
+    });
+    setPortfolioValues(removed);
+  }
+
   return (
     <div className="App">
 
       <Search onSearchSubmit={onSearchSubmit} search={search} handleSearchChange={handleSearchChange}/>
-      <ListPortfolio portfolioValues={portfolioValues}/>      
+      <ListPortfolio portfolioValues={portfolioValues} onPortfolioDelete={onPortfolioDelete}/>      
       <CardList searchResults={SearchResult} onPortfolioCreate={onPortfolioCreate}/> 
       {serverError && <div>Unable to connect</div>}
 
