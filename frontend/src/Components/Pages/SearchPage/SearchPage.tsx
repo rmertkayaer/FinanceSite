@@ -3,13 +3,10 @@ import { CompanySearch } from '../../../company.d';
 import { searchCompanies } from '../../../api';
 import Navbar from '../../Navbar/Navbar';
 import Search from '../../Search/Search';
-import Hero from '../../Hero/Hero';
 import ListPortfolio from '../../Portfolio/ListPortfolio/ListPortfolio';
 import CardList from '../../CardList/CardList';
 
 interface Props {
-
- 
 }
 
 const SearchPage = (props: Props) => {
@@ -50,8 +47,7 @@ const SearchPage = (props: Props) => {
     };
   return (
     <div className="App">
-      <Navbar/>
-      <Hero/>
+      <Navbar/>   
       <Search onSearchSubmit={onSearchSubmit} search={search} handleSearchChange={handleSearchChange}/>
       <ListPortfolio portfolioValues={portfolioValues} onPortfolioDelete={onPortfolioDelete}/>      
       <CardList searchResults={SearchResult} onPortfolioCreate={onPortfolioCreate}/> 
