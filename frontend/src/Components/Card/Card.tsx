@@ -17,7 +17,7 @@ import { Link } from 'react-router-dom';
         key={id}
         id={id}
       >
-        <Link to={'company/${searchResult.symbol}'}
+        <Link to={`company/${searchResult.symbol}`}
           className="font-bold text-center text-black md:text-left">
           {searchResult.name} ({searchResult.symbol})
         </Link>
