@@ -1,4 +1,6 @@
 import React from "react";
+import hero from "./hero.png"
+
 
 interface Props {}
 
@@ -15,12 +17,12 @@ const Hero = (props: Props) => {
             news.
           </p>
           <div className="mx-auto lg:mx-0">
-            <Link
-              to="/search"
-              className="py-5 px-10 text-2xl font-bold text-white bg-lightGreen rounded lg:py-4 hover:opacity-70"
+            <a
+              href="  "
+              className="py-5 px-10 text-2xl font-bold text-white bg-lightGreen rounded lg:py-4 hover-over:opacity-70"
             >
               Get Started
-            </Link>
+            </a>
           </div>
         </div>
         <div className="mb-24 mx-auto md:w-180 md:px-10 lg:mb-0 lg:w-1/2">
