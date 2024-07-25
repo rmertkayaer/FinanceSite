@@ -23,13 +23,15 @@ export const searchCompanies = async (query: string) => {
 };
 
 
-export const getCompanyProfile = async (query : string) => {
+export const getKeyMetrics = async (query : string) => {
   try{
-    const data = await axios.get<CompanyProfile[]>(
-      `https://financialmodelingprep.com/api/v3/profile/${query}?apikey=${process.env.REACT_APP_API_KEY}`
+    const data = await axios.get<CompanyKeyMetrics[]>(
+      `https://financialmodelingprep.com/api/v3/key-metrics-ttm/${query}?apikey=${process.env.REACT_APP_API_KEY}`
     );
     return data;
   }catch(error: any){
     console.log("error message from API:",error.message);  
   }
 }
+
+//https://financialmodelingprep.com/api/v3/key-metrics/AAPL?period=annual
